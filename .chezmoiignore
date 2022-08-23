@@ -2,3 +2,9 @@
 install.sh
 LICENSE
 README.md
+
+{{ if ne .chezmoi.os "linux" }}
+{{   if ne (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+.config/fish/conf.d/wsl-ssh-agent.fish
+{{   end }}
+{{ end }}
