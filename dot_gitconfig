@@ -3,9 +3,6 @@
 [user]
 	email = jack@platten.me
 	name = Jack Platten
-	signingkey = E22A968FD74715144CF9FD6E93EDC8A5B9575CCD
-
-
 [pull]
 	rebase = false
 [alias]
@@ -48,8 +45,6 @@
     la = "!git config -l | grep alias | cut -c 7-"
 [commit]
 	gpgsign = false
-[gpg]
-	program = /opt/homebrew/bin/gpg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
