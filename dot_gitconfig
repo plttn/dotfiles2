@@ -76,4 +76,4 @@
 
 
 [gpg "ssh"]
-	allowedSignersFile = /Users/jack/.ssh/allowed_signers
+	allowedSignersFile = ~/.ssh/allowed_signers
