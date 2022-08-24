@@ -3,6 +3,8 @@
 [user]
 	email = jack@platten.me
 	name = Jack Platten
+    signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHGminsJAXUJkc7TH7qHU6RNdZuMcWIwdx+zZCDpDiUG
+
 
 
 [pull]
@@ -76,3 +78,7 @@
 	allowedSignersFile = ~/.ssh/allowed_signers
 [fetch]
 	prune = true
+
+[gpg]
+  format = ssh
+
