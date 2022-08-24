@@ -20,10 +20,7 @@ end
 if type -q op
    op completion fish | source
 end
-{{ if eq .chezmoi.os "darwin" }}
 
-set -x SSH_AUTH_SOCK ~/.1password/agent.sock
-{{ end }}
 
 #op completion fish | source
 
