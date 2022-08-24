@@ -24,9 +24,10 @@
 {{-   writeToStdout "💡 Tip: you can re-enter your name and email with `chezmoi init --data=false`.\n" -}}
 {{- end -}}
 
-sourceDir: "{{ .chezmoi.sourceDir }}"
+sourceDir = "{{ .chezmoi.sourceDir }}"
 
-data:
-  name: "{{ $name }}"
-  email: "{{ $email }}"
-  is_wsl: {{ $is_wsl }}
+[data]
+  name = "{{ $name }}"
+  email =  "{{ $email }}"
+  is_wsl = {{ $is_wsl }}
+  
