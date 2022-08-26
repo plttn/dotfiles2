@@ -47,8 +47,7 @@
 
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
-[commit]
-	gpgsign = false
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -76,9 +75,16 @@
 
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
+
+    {{ if eq .chezmoi.os "darwin" }}
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    {{ end }}
+
 [fetch]
 	prune = true
 
 [gpg]
   format = ssh
+
+
 
