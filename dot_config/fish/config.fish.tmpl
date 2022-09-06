@@ -29,6 +29,12 @@ set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 
 #op completion fish | source
 
+{{ if eq .chezmoi.os "darwin" }}
+
 # Created by `pipx` on 2022-08-02 02:54:46
 set PATH $PATH /Users/jack/.local/bin
 fish_add_path /opt/homebrew/sbin
+{{ end }}
+
+
+
