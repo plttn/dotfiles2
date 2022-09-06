@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    atuin init fish | source
 end
 
 set fish_greeting
@@ -30,3 +31,4 @@ set -x SSH_AUTH_SOCK ~/.1password/agent.sock
 
 # Created by `pipx` on 2022-08-02 02:54:46
 set PATH $PATH /Users/jack/.local/bin
+fish_add_path /opt/homebrew/sbin
