@@ -1,0 +1,5 @@
+#Match exec "set -q SSH_CONNECTION"
+#	IdentityAgent SSH_AUTH_SOCK
+
+Host *
+	IdentityAgent "~/.1password/agent.sock"

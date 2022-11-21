@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    atuin init fish | source
+    # atuin init fish | source
 end
 
 set fish_greeting
@@ -23,8 +23,9 @@ if type -q op
 end
 
 {{ if eq .chezmoi.os "darwin" }}
-
+if string match -qe -- "launchd" "$SSH_AUTH_SOCK"
 set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+end
 {{ end }}
 
 #op completion fish | source
